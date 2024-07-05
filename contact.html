@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Projects</title>
+
+    <style>
+
+        .page {
+            color: lightblue;
+            height: 120vh;
+        }
+
+        .content {
+            color: lightblue;
+        }
+
+        .container {
+            color: white;
+        }
+
+        .contact {
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .contact .content{
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contact .content h2 {
+            font-size: 36px;
+            font-weight: 500;
+            color: #081b29;
+        }
+
+        .contact .content p {
+            font-weight: 300;
+            color: #081b29;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .container .socialMedia {
+            width: 50%;
+            display:flex;
+            flex-direction: column;
+        }
+
+        .container .socialMedia .box {
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+
+        .container .socialMedia .box .icon {
+            min-width: 60px;
+            height: 30px;
+            background: #081b29;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+
+        .container .socialMedia .box .text {
+            display: flex;
+            margin-left: 20px;
+            font-size: 20px;
+            color: lightblue;
+            flex-direction: column;
+            font-weight: 500;
+            
+        }
+
+        .container .socialMedia .box .text h3 {
+            font-weight: 200;
+        }
+
+        .contactForm {
+            width: 40%;
+            padding: 40px;
+            background: white;
+        }
+
+        .contactForm h2 {
+            font-size: 30px;
+            color: #081b29;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contactForm .inputBox input {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .contactForm .inputBox input, 
+        .contactForm .inputBox textarea{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #081b29;
+            outline: none;
+            resize: none;
+        }
+
+        .contactForm .inputBox span {
+            position: absolute;
+            left: 830px;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            transition: 0.5s;
+            color: #081b29;
+        }
+
+        .contactForm .inputBox input:focus ~ span,
+        .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox textarea:focus ~ span {
+            color: red;
+            transform: translateY(-20px);
+        }
+
+        .contactForm .inputBox input[type="submit"] {
+            width: 100px;
+            background: lightblue;
+            color: #081b29;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <section class="page">
+        <div>
+            <nav>
+                <ul>
+                    <li style="font-size:x-large"><a href="index.html">Stephen K.</a></li>
+                </ul>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutMe.html">About Me</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="contact">
+            <div class="content">
+                <h1 style="font-size:40px; margin-bottom:50px; text-align: center;">Contact Me</h1>
+            </div>
+            <div class="container">
+                <div class="socialMedia">
+                    <div class="box">
+                        <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                        <div class="text">
+                            <h3><a href="https://www.facebook.com/" style="text-decoration: none; color:lightblue;">Facebook</a></h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="text">
+                            <h3><a href="https://www.instagram.com/" style="text-decoration: none; color:lightblue;">Instagram</a></h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+                        <div class="text">
+                            <h3><a href="https://x.com/?lang=en" style="text-decoration: none; color:lightblue;">Twitter</a></h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                        <div class="text">
+                            <h3><a href="https://www.linkedin.com/in/stephen-kim-43092b237/" style="text-decoration: none; color:lightblue;">Linkedin</a></h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                        <div class="text">
+                            <h3><a href="https://www.youtube.com/" style="text-decoration: none; color:lightblue;">Youtube</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form>
+                        <h2>Send Message</h2>
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Subject</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea required="required"></textarea>
+                            <span>Message</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Stephen</span></p>
+        </div>
+    </footer>
+</body>
+</html>

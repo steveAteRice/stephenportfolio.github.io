@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>About Me</title>
+    <style>
+
+        .page {
+            color: lightblue;
+            height: 140vh;
+        }
+
+        .page .about {
+            margin: 28%;
+            margin-top: 4%;
+        }
+
+        .page .skills {
+            margin: 20%;
+            margin-top: -20%;
+            text-align: center;
+        }
+
+        .skills ul li{
+            display:inline-block;
+            list-style: none;
+            margin: 5px 65px;
+        }
+
+        .skillIcons {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .skillIcons li:hover {
+            color: white;
+        }
+
+        .skills .download {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: lightblue;
+            font-size: 19px;
+            font-weight: bold;
+            border-radius: 25px;
+            margin-top: 25px;
+            transition: 0.2s;
+        }
+
+        .skills .download:hover {
+            background-color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="page">
+        <div>
+            <nav>
+                <ul>
+                    <li style="font-size:x-large"><a href="index.html">Stephen K.</a></li>
+                </ul>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutMe.html">About Me</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="about">
+                <h1 style="font-size:40px; margin-bottom:20px; text-align: center;">About Me</h1>
+                <p>
+                    I am a 3rd year Information Technology student at York University. 
+                    My passion for technology began at an early age, which inspired me to pursue this major and career path. 
+                    In my free time, I enjoy online gaming, hiking, and watching movies.
+                </p>
+            </div>
+            <div class="skills">
+                <h2 style="font-size:40px; margin-bottom:20px; text-align: center;">Skills</h2>
+                
+                <div class="skillIcons">
+                    <ul>
+                        <li>JAVA 
+                            <br>
+                            <br><i class="fa-brands fa-java"></i>
+                        </li>
+                        <li>SQL
+                            <br>
+                            <br><i class="fa fa-database"></i>
+                        </li>
+                        <li>HTML & CSS 
+                            <br>
+                            <br><i class="fa-brands fa-css3"></i>
+                        </li>
+                        <li>Research 
+                            <br>
+                            <br><i class="fa fa-clipboard"></i>
+                        </li>
+                    </ul>
+                </div>   
+                <div>
+                    <iframe src="Resume.pdf" width="25%" height="300px" title="PDF-file"></iframe>
+                </div>     
+                <div class="download">
+                    <a href="Resume.pdf" download style="text-decoration: none; color:#081b29;">Resume</a>
+                </div>    
+            </div>        
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Stephen</span></p>
+        </div>
+    </footer>
+</body>
+</html>
