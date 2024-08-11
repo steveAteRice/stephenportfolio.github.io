@@ -1,12 +1,12 @@
 [
     {
         "title": "Implementing Light/Dark Mode",
-        "date": "2024-08-10",
-        "content": "In this blog post, I describe how I implemented the light/dark mode switcher on my portfolio website. The approach uses CSS custom properties to define theme colors, which are toggled using a button with JavaScript."
+        "date": "2024-08-12",
+        "content": "\nIn this post, I’ll walk you through the process of adding a dark and light theme switcher to my portfolio website. This feature allows visitors to toggle between a light and dark theme, enhancing user experience and accessibility.\n\nStep 1: Modify Your HTML Files\nI started by updating all my html file's navigation bar to include a button for toggling the themes. This button allows users to switch between light and dark themes seamlessly.\n\nStep 2: Add Theme Toggle Button and JavaScript\nIn the HTML files, I added a `div` with an `id` of `btn` for the toggle button. I also included a `script` section at the bottom of the HTML files to handle the theme switching functionality. The JavaScript code toggles a class on the `body` element to switch themes and updates the button text accordingly.\n\nStep 3: Define CSS Variables for Themes\nIn `styles.css`, I defined CSS variables for both the light and dark themes. I set the default light theme using the `:root` selector and defined the dark theme in a class called `dark-theme`. The CSS variables control the background color and text color of the page.\n\nStep 4: Style the Theme Toggle Button\nI styled the theme toggle button in the CSS to make it visually appealing and ensure it fits well with the rest of the design. The button changes its text based on the current theme, providing a clear indication of the available option.\n\nConclusion\nBy following these steps, I successfully added a theme switcher to my website. This feature improves the overall user experience by allowing visitors to choose their preferred theme. If you have any questions or need further customization, feel free to reach out!"
     },
     {
-        "title": "Dynamic Blog Section with JavaScript",
-        "date": "2024-08-11",
-        "content": "This post explains how I dynamically loaded and displayed blog posts using JavaScript. The blog posts are fetched from a JSON file and inserted into the HTML of the blog page."
+        "title": "Creating a Dynamic Blog Section with JavaScript and JSON",
+        "date": "August 10, 2024",
+        "content": "\nIn this post, I’ll walk you through how I added a dynamic blog section to my portfolio website. I used JavaScript to fetch and display blog posts from a JSON file, making it simple and efficient to update content.\n\n Step 1: Modify Your HTML File\nI started by adding a container for the blog posts in my blog.html file line 30 and linking to the JavaScript file.\n\nStep 2: Create and Configure the JSON File\nNext, I created a JSON file named posts.json to store my blog posts.\n\nStep 3: Implement JavaScript to Load Blog Posts\nIn my scripts.js file, I modified the JavaScript code provided to dynamically fetch and display the blog posts\n\nStep 4: Style Your Blog Posts\nFinally, I added the CSS rules to styles.css to style the blog posts\n\nConclusion\nBy following these steps, I’ve successfully added a dynamic blog section to my website. This setup makes managing and updating blog content straightforward using a JSON file. If you have any questions or need further customization, feel free to reach out!"
     }
 ]
