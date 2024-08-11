@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>About Me</title>
     <style>
-
         .page {
-            color: lightblue;
             height: 140vh;
         }
 
@@ -27,7 +25,7 @@
         .skills ul li{
             display:inline-block;
             list-style: none;
-            margin: 5px 65px;
+            margin: 5px 55px;
         }
 
         .skillIcons {
@@ -37,7 +35,7 @@
         }
 
         .skillIcons li:hover {
-            color: white;
+            color: green;
         }
 
         .skills .download {
@@ -54,64 +52,83 @@
         .skills .download:hover {
             background-color: white;
         }
-        
     </style>
 </head>
 <body>
-    <section class="page">
-        <div>
-            <nav>
-                <ul>
-                    <li style="font-size:x-large"><a href="index.html">Stephen K.</a></li>
-                </ul>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutMe.html">About Me</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="about">
-                <h1 style="font-size:40px; margin-bottom:20px; text-align: center;">About Me</h1>
-                <p>
-                    I am a 3rd year Information Technology student at York University. 
-                    My passion for technology began at an early age, which inspired me to pursue this major and career path. 
-                    In my free time, I enjoy online gaming, hiking, and watching movies.
-                </p>
+    <div class="page">
+        <nav>
+            <ul>
+                <li style="font-size:x-large;width:126px;"><a href="index.html">Stephen K.</a></li>
+            </ul>
+            <ul style="text-align: right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle-btn" id="btn">
+                <span id="btnText">Dark</span>
             </div>
-            <div class="skills">
-                <h2 style="font-size:40px; margin-bottom:20px; text-align: center;">Skills</h2>
-                
-                <div class="skillIcons">
-                    <ul>
-                        <li>JAVA 
-                            <br>
-                            <br><i class="fa-brands fa-java"></i>
-                        </li>
-                        <li>SQL
-                            <br>
-                            <br><i class="fa fa-database"></i>
-                        </li>
-                        <li>HTML & CSS 
-                            <br>
-                            <br><i class="fa-brands fa-css3"></i>
-                        </li>
-                        <li>Research 
-                            <br>
-                            <br><i class="fa fa-clipboard"></i>
-                        </li>
-                    </ul>
-                </div>   
-                <div>
-                    <iframe src="Resume.pdf" width="25%" height="300px" title="PDF-file"></iframe>
-                </div>     
-                <div class="download">
-                    <a href="Resume.pdf" download style="text-decoration: none; color:#081b29;">Resume</a>
-                </div>    
-            </div>        
+        </nav>
+
+        <div class="about">
+            <h1 style="font-size:40px; margin-bottom:20px; text-align: center;">About Me</h1>
+            <p>
+                I am a 3rd year Information Technology student at York University. 
+                My passion for technology began at an early age, which inspired me to pursue this major and career path. 
+                In my free time, I enjoy online gaming, hiking, and watching movies.
+            </p>
         </div>
-    </section>
+
+        <div class="skills">
+            <h2 style="font-size:40px; margin-bottom:20px; text-align: center;">Skills</h2>
+                
+            <div class="skillIcons">
+                <ul>
+                    <li>JAVA 
+                        <br>
+                        <br><i class="fa-brands fa-java"></i>
+                    </li>
+                    <li>SQL
+                        <br>
+                        <br><i class="fa fa-database"></i>
+                    </li>
+                    <li>HTML & CSS 
+                        <br>
+                        <br><i class="fa-brands fa-css3"></i>
+                    </li>
+                    <li>Research 
+                        <br>
+                        <br><i class="fa fa-clipboard"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <iframe src="Resume.pdf" width="25%" height="300px" title="PDF-file"></iframe>
+            </div>  
+
+            <div class="download">
+                <a href="Resume.pdf" download style="text-decoration: none; color:#081b29;">Resume</a>
+            </div>    
+        </div>        
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let btnText = document.getElementById("btnText");
+        
+        btn.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+
+            if(document.body.classList.contains("dark-theme")){
+                btnText.innerHTML = "Light";
+            }else{
+                btnText.innerHTML = "Dark";
+            }
+        }
+    </script>
     
     <footer>
         <div class="footerContainer">
