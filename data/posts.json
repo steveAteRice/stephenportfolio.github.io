@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Implementing Light/Dark Mode",
+        "date": "2024-08-10",
+        "content": "In this blog post, I describe how I implemented the light/dark mode switcher on my portfolio website. The approach uses CSS custom properties to define theme colors, which are toggled using a button with JavaScript."
+    },
+    {
+        "title": "Dynamic Blog Section with JavaScript",
+        "date": "2024-08-11",
+        "content": "This post explains how I dynamically loaded and displayed blog posts using JavaScript. The blog posts are fetched from a JSON file and inserted into the HTML of the blog page."
+    }
+]
