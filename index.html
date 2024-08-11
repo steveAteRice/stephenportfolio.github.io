@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <title>Personal Portfolio</title>
     <style>
-
-        .intro{
+        .intro {
             margin-left: 8%;
             margin-top: 15%;
-            color: lightblue;
         }
 
-        .pic{
+        .pic {
             width: 45%;
             height: 80%;
             position: absolute;
@@ -22,7 +20,7 @@
             right: 100px;
         }
 
-        .pic img{
+        .pic img {
             height: 100%;
             position: absolute;
             left: 50%;
@@ -31,52 +29,67 @@
             transition: bottom 1s, left 1s;
         }
 
-        .pic:hover .splash{
+        .pic:hover .splash {
             bottom: 40px;
         }
 
-        
-        .pic:hover .myself{
+        .pic:hover .myself {
             left: 45%;
         }
-
     </style>
 </head>
 <body>
-    <section class="page">
-        <div>
-            <nav>
-                <ul>
-                    <li style="font-size:x-large"><a href="index.html">Stephen K.</a></li>
-                </ul>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutMe.html">About Me</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="intro">
-                <h1 style="font-size:50px; margin-bottom:20px;">I am Stephen <span>Kim</span></h1>
-                <p>This is my official portfolio website to showcase my
-                    <br> work and interests as an ITEC student.
-                </p>
+    <div class="page">
+        <nav>
+            <ul>
+                <li style="font-size:x-large;width:126px;"><a href="index.html">Stephen K.</a></li>
+            </ul>
+            <ul style="text-align: right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle-btn" id="btn">
+                <span id="btnText">Dark</span>
             </div>
-            <div class="pic">
-                <img src="images/test.png" class="splash">
-                <img src="images/myself.png" class="myself">
-            </div>
+        </nav>
+
+        <div class="intro">
+            <h1 style="font-size:50px; margin-bottom:20px;">I am Stephen <span>Kim</span></h1>
+            <p>This is my official portfolio website to showcase my<br>work and interests as an ITEC student.</p>
         </div>
-    </section>
+
+        <div class="pic">
+            <img src="images/test.png" class="splash">
+            <img src="images/myself.png" class="myself">
+        </div>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let btnText = document.getElementById("btnText");
+        
+        btn.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+
+            if(document.body.classList.contains("dark-theme")){
+                btnText.innerHTML = "Light";
+            }else{
+                btnText.innerHTML = "Dark";
+            }
+        }
+    </script>
+
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
         <div class="footerBottom">
