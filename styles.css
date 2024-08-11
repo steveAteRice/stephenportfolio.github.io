@@ -1,56 +1,119 @@
-*{
+/* Reset margins and paddings, set default font */
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-.page{
+:root{
+    --background-color: white;
+    --text-color: #081b29;
+}
+.dark-theme{
+    --background-color: #081b29;
+    --text-color: lightblue;
+}
+
+body{
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.6s, color 0.6s;
+}
+
+/* Full-page layout with dark background */
+.page {
     position: relative;
+    padding: 0 8%;
     width: 100%;
-    height: 100vh;
-    background: #081b29;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-nav{
+/* Navigation bar styling */
+nav {
     display: flex;
-    width: 100%;
-    margin: auto;
-    padding: 20px 0;
+    padding: 10px 0;
     align-items: center;
-    justify-content: space-between;
 }
 
-nav ul li{
-    display:inline-block;
+/* Navigation list items */
+nav ul {
+    width: 100%;
     list-style: none;
-    margin: 10px 20px;
+    margin-right: 50px;
 }
 
-nav ul li a{
+nav ul li {
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+/* Navigation links */
+nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-weight: bold;
 }
 
-nav ul li a:hover{
+/* Navigation link hover effect */
+nav ul li a:hover {
     color: lightblue;
 }
 
-footer{
+.toggle-btn{
+    background: var(--text-color);
+    color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.blog-section {
+    padding: 20px;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: var(--background-color);
+}
+
+.blog-post h2 {
+    margin-bottom: 10px;
+}
+
+.blog-date {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
     background-color: lightblue;
 }
 
-.footerContainer{
+/* Container for footer content */
+.footerContainer {
     width: auto;
-    padding: 30px 30px 20px
+    padding: 30px 30px 20px;
 }
 
-.socialIcons{
+/* Social icons container */
+.socialIcons {
     display: flex;
     justify-content: center;
 }
 
-.socialIcons a{
+/* Social icon links */
+.socialIcons a {
     text-decoration: none;
     padding: 10px;
     background-color: #081b29;
@@ -58,23 +121,27 @@ footer{
     border-radius: 50%;
 }
 
-.socialIcons a i{
+/* Social icon styling */
+.socialIcons a i {
     font-size: 2em;
     color: white;
-    opacity:0.9;
+    opacity: 0.9;
 }
 
-.socialIcons a:hover{
+/* Social icon hover effect */
+.socialIcons a:hover {
     background-color: lightblue;
     transition: 0.2s;
 }
 
-.footerBottom{
+/* Footer bottom section styling */
+.footerBottom {
     background-color: lightblue;
     padding: 20px;
     text-align: center;
 }
 
-.footerBottom p{
+/* Footer bottom text styling */
+.footerBottom p {
     color: #081b29;
 }
