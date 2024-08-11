@@ -6,10 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <title>Projects</title>
-
     <style>
         .page {
-            color: lightblue;
             height: 180vh;
         }
 
@@ -22,7 +20,6 @@
         .sample {
             width: 100px;
             height: 100px;
-            position: static;
             bottom: 0;
             right: 100px;
         }
@@ -30,7 +27,7 @@
         .sample img {
             height: 200%;
             position: relative;
-            left: 340px;
+            left: 300px;
             bottom: -20px;
             transform: translateX(-50%);
             transition: bottom 2s, left 1s;
@@ -39,7 +36,6 @@
         .app {
             width: 100px;
             height: 100px;
-            position: static;
             bottom: 0;
             right: 100px;
         }
@@ -47,7 +43,7 @@
         .app img {
             height: 200%;
             position: relative;
-            left: 340px;
+            left: 300px;
             bottom: -20px;
             transform: translateX(-50%);
             transition: bottom 2s, left 1s;
@@ -76,27 +72,32 @@
             margin-bottom: 70px;
             transition: 0.2s;
         }
-
     </style>
 </head>
 <body>
-    <section class="page">
+    <div class="page">
         <div>
             <nav>
                 <ul>
-                    <li style="font-size:x-large"><a href="index.html">Stephen K.</a></li>
+                    <li style="font-size:x-large;width:126px;"><a href="index.html">Stephen K.</a></li>
                 </ul>
-                <ul>
+                <ul style="text-align: right">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutMe.html">About Me</a></li>
                     <li><a href="project.html">Projects</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <div class="toggle-btn" id="btn">
+                    <span id="btnText">Dark</span>
+                </div>
             </nav>
+
             <div class="work">
                 <h1 style="font-size:40px; margin-bottom:50px; text-align: center;">Projects</h1>
+                
                 <h2 style="font-size:35px; margin-bottom:20px; text-align: center;">iFixit</h2>
+                
                 <p> This project required the development of a concise instructional guide aligned with iFixit's environmental mission.
                     The objective was to choose and repair an item, spanning various categories like household, electronic, automotive, and more,
                     ensuring clarity for the target audience.
@@ -104,26 +105,46 @@
                     <br>The iterative process involved steps such as audience analysis and continuous refinement,
                     guided by valuable feedback from the professor, the iFixit team, and peers.
                 </p>
+
                 <div class="sample">
                     <img src="images/projectPic1.jpg">
                 </div>
+
                 <div class="ifixitLink">
                     <a href="https://www.ifixit.com/Guide/Casio+G-Shock+G8900A-1CR+Battery+Replacement./165369" style="text-decoration: none; color:#081b29;">iFixit Page</a>
                 </div>
+
                 <h2 style="font-size:35px; margin-bottom:20px; text-align: center;">FastFeast</h2>
                 <p>
                     My group and I were tasked with designing a food delivery app that focuses on UI/UX design. Our goal was to create a high-fidelity
                     prototype featuring unique elements that set our product apart from existing ones.
                 </p>
+
                 <div class="app">
                     <img src="images/fastfeast.png">
                 </div>
+
                 <div class="fastFeastLink">
                     <a href="https://www.dropbox.com/scl/fi/57f67y4vk2iilkqlhmhkd/Video_Walkthrough.mov?rlkey=x43565uwe82c7hm1fvfl93jqi&st=q3os2zd1&dl=0" style="text-decoration: none; color:#081b29;">Final Product</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let btnText = document.getElementById("btnText");
+        
+        btn.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+
+            if(document.body.classList.contains("dark-theme")){
+                btnText.innerHTML = "Light";
+            }else{
+                btnText.innerHTML = "Dark";
+            }
+        }
+    </script>
 
     <footer>
         <div class="footerContainer">
