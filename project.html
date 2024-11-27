@@ -14,23 +14,7 @@
         .page .work {
             margin: 28%;
             margin-top: 4%;
-            text-align: center;
-        }
-
-        .sample {
-            width: 100px;
-            height: 100px;
-            bottom: 0;
-            right: 100px;
-        }
-
-        .sample img {
-            height: 200%;
-            position: relative;
-            left: 300px;
-            bottom: -20px;
-            transform: translateX(-50%);
-            transition: bottom 2s, left 1s;
+            text-align: left;
         }
 
         .app {
@@ -48,30 +32,6 @@
             transform: translateX(-50%);
             transition: bottom 2s, left 1s;
         }
-
-        .work .ifixitLink {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: lightblue;
-            font-size: 19px;
-            font-weight: bold;
-            border-radius: 25px;
-            margin-top: 140px;
-            margin-bottom: 70px;
-            transition: 0.2s;
-        }
-
-        .work .fastFeastLink {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: lightblue;
-            font-size: 19px;
-            font-weight: bold;
-            border-radius: 25px;
-            margin-top: 140px;
-            margin-bottom: 70px;
-            transition: 0.2s;
-        }
     </style>
 </head>
 <body>
@@ -83,9 +43,8 @@
                 </ul>
                 <ul style="text-align: right">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutMe.html">About Me</a></li>
+                    <li><a href="aboutMe.html">Profile</a></li>
                     <li><a href="project.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="toggle-btn" id="btn">
@@ -96,37 +55,55 @@
             <div class="work">
                 <h1 style="font-size:40px; margin-bottom:50px; text-align: center;">Projects</h1>
                 
-                <h2 style="font-size:35px; margin-bottom:20px; text-align: center;">iFixit</h2>
+                <h2 style="font-size:30px; margin-bottom:20px; text-align: center;">ChatGPT Efficiency Test</h2>
                 
-                <p> This project required the development of a concise instructional guide aligned with iFixit's environmental mission.
-                    The objective was to choose and repair an item, spanning various categories like household, electronic, automotive, and more,
-                    ensuring clarity for the target audience.
+                <p> For this project, I evaluated ChatGPT's efficiency and accuracy across 
+                    three different domains: History, Social Science, and Computer Security. I set up the evaluation using a 
+                    combination of tools and technologies that made the process both streamlined and effective:
                     <br>
-                    <br>The iterative process involved steps such as audience analysis and continuous refinement,
-                    guided by valuable feedback from the professor, the iFixit team, and peers.
+                    <br>
+                    <ul>
+                        <li><b>MongoDB:</b> I used MongoDB to store the dataset, which included questions, anticipated answers, and ChatGPT's responses.</li><br>
+                        <li><b>Node.js:</b> I developed a server-side application with Node.js to connect the database with the ChatGPT API and handle communication seamlessly.</li><br>
+                        <li><b>ChatGPT API:</b> The API allowed me to programmatically send questions to ChatGPT and retrieve its responses for analysis. This setup ensured 
+                            efficient data handling, smooth API integration, and a clear process for evaluating ChatGPT’s performance.</li>
+                    </ul>
                 </p>
 
-                <div class="sample">
-                    <img src="images/projectPic1.jpg">
-                </div>
-
-                <div class="ifixitLink">
-                    <a href="https://www.ifixit.com/Guide/Casio+G-Shock+G8900A-1CR+Battery+Replacement./165369" style="text-decoration: none; color:#081b29;">iFixit Page</a>
-                </div>
-
-                <h2 style="font-size:35px; margin-bottom:20px; text-align: center;">FastFeast</h2>
-                <p>
-                    My group and I were tasked with designing a food delivery app that focuses on UI/UX design. Our goal was to create a high-fidelity
-                    prototype featuring unique elements that set our product apart from existing ones.
+                <h2 style="font-size:23px; margin-bottom:20px; margin-top:32px; text-align: center;">Dataset Overview</h2>
+                
+                <p> I organized a dataset of questions spanning three domains:
+                    <br>
+                    <br>
+                    <ol>
+                        <li><b>History:</b> Questions explore historical events, important figures, and cultural developments.</li><br>
+                        <li><b>Social Science:</b> These questions focus on topics like sociological theories, human behavior, and cultural phenomena.</li><br>
+                        <li><b>Computer Security:</b> This category includes technical questions on cybersecurity concepts, best practices, and threats.</li>
+                    </ol>
                 </p>
-
-                <div class="app">
-                    <img src="images/fastfeast.png">
+                <br>
+                <br>
+                <p> Each question in the dataset includes:
+                    <br>
+                    <br>
+                    <ul>
+                        <li>The <b>question text</b> itself</li><br>
+                        <li>An <b>anticipated answer</b>, which I determined through research</li><br>
+                        <li>A placeholder for <b>ChatGPT's responses</b>, which was populared during testing.</li>
+                    </ul>
+                </p>
+                <p style="margin-top: 20px;">
+                    The purpose of this evaluation is to assess how well ChatGPT aligns its answers with the 
+                    anticipated ones and to measure its response times across these domains. This dataset 
+                    represents a comprehensive testing ground to evaluate ChatGPT's capabilities.
+                </p>
+                
+                <div class="results">
+                    <h2 style="font-size:23px; margin-bottom:20px; margin-top:40px; text-align: center;">Evaluation Results</h2>
+                    <p id="accuracy" style="text-align: center;">Accuracy: Loading...</p>
+                    <p id="response-time" style="text-align: center;">Average Response Time: Loading...</p>
                 </div>
-
-                <div class="fastFeastLink">
-                    <a href="https://www.dropbox.com/scl/fi/57f67y4vk2iilkqlhmhkd/Video_Walkthrough.mov?rlkey=x43565uwe82c7hm1fvfl93jqi&st=q3os2zd1&dl=0" style="text-decoration: none; color:#081b29;">Final Product</a>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -160,5 +137,17 @@
             <p>Copyright &copy;2024; Designed by <span class="designer">Stephen</span></p>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('http://localhost:3000/results')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('accuracy').innerText = `Accuracy: ${(data.accuracy * 100).toFixed(2)}%`;
+                    document.getElementById('response-time').innerText = `Average Response Time: ${data.avgResponseTime.toFixed(2)} ms`;
+                })
+                .catch(error => console.error('Error fetching results:', error));
+        });
+    </script>
 </body>
 </html>
