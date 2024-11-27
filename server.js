@@ -16,13 +16,11 @@ const dbName = 'ChatGPT_Evaluation';
 const apiUrl = 'https://api.openai.com/v1/chat/completions';
 const apiKey = process.env.OPENAI_API_KEY;
 
-// Debug: Ensure the API key is loaded
 if (!apiKey) {
     console.error('Error: OPENAI_API_KEY is missing in .env file');
     process.exit(1);
 }
 
-// Manual retry function for handling API calls
 async function makeRequestWithRetry(url, options, retries = 3) {
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
@@ -31,15 +29,14 @@ async function makeRequestWithRetry(url, options, retries = 3) {
         } catch (error) {
             if (attempt < retries && (error.response?.status === 429 || error.code === 'ECONNABORTED')) {
                 console.log(`Retry attempt ${attempt} failed. Retrying...`);
-                await new Promise(resolve => setTimeout(resolve, attempt * 2000)); // Exponential backoff
+                await new Promise(resolve => setTimeout(resolve, attempt * 2000)); 
             } else {
-                throw error; // Rethrow error if retries exhausted
+                throw error;
             }
         }
     }
 }
 
-// Load CSV data into MongoDB
 async function loadCsvToMongo(filePath, collectionName) {
     const db = client.db(dbName);
     const collection = db.collection(collectionName);
